@@ -51,7 +51,7 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-//it's a pre hook middleware bifore saving data saved in mongodb it is used for hashed
+//it's a pre hook middleware bifore saving data in mongodb, it is used for hashing password
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
 

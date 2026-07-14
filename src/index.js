@@ -21,7 +21,9 @@ connectDB()
     });
 
     app.listen(process.env.PORT || 8000, () => {
-      console.log(`Server is running on port  https://${process.env.PORT}`);
+      console.log(
+        `Server is running on port  http://localhost:${process.env.PORT}`
+      );
     });
   })
   .catch(() => {
